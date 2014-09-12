@@ -1,0 +1,14 @@
+<div class="task">
+	<form role="form" id="form-edit-task">
+        <input type="text" class="form-control" id="edit-task" placeholder="<%=@task.get('title') %>" value="<%=@task.get('title')%>" />
+    </form>
+	<div class="view" id="view">
+	    <input class="toggle" type="checkbox" id="toggle" <%= @checked %>>
+	    <p><%=@task.get('title')%></p>
+	    <div class="edit-trash-task">
+	        <span class="glyphicon glyphicon-pencil" data-action="edit-task"></span>
+	        <span class="separator">|</span>
+	        <span class="glyphicon glyphicon-trash" data-action="delete-task"></span>
+	    </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+  <header class="header">
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <div class="title" data-action="edit-title">
+      <form role="form" id="form-edit-title">
+        <input type="text" id="edit-title" class="form-control" placeholder="<%=@todolist.get('title') %>" value="<%=@todolist.get('title') %>" />
+      </form>
+      <p><%=@todolist.get('title') %></p>
+      <div class="edit-trash">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="separator">|</span>
+        <span class="glyphicon glyphicon-trash" data-action="delete-todo"></span>
+      </div>
+    </div>
+  </header>
+  
+
+

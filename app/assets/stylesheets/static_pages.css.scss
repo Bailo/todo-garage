@@ -1,0 +1,212 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+
+
+body {
+  padding-bottom: 30px;
+  background: url('bg.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.edit {
+  display: inline-block !important;
+}
+
+.editing {
+  display: none;
+}
+
+.todo-list {
+  max-width: 700px;
+  min-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.header {
+  height: 52px;
+  background: url("header.png") repeat-x;
+  border: 1px solid #315589;
+  padding: 12px 35px 10px 15px;
+  & .glyphicon {
+    font-size: 1.3em;
+  }
+  & .glyphicon-list-alt {
+    font-size: 1.7em;
+    float: left;
+    color: #424953;
+  }
+  & .title {
+    margin-left: 40px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    & input {
+      position: absolute;
+      width: 100%;
+      height: 35px;
+      top: -3px;
+      left: -4px;
+      display: none;
+      z-index: 4444;
+      font-size: 1.4em;
+    }
+    &:hover .glyphicon-pencil {
+      color: #ffffff !important;
+    }
+    & p {
+      color: #FFFFFF;
+      font-size: 1.4em;
+      float: left;
+      cursor: pointer;
+    }
+    & .edit-trash {
+      position: absolute;
+      right: -25px;
+      top: 3px;
+      cursor: default;
+      &:hover .glyphicon-pencil {
+        color: #98B0D2 !important;
+      }
+      & .glyphicon-pencil, .glyphicon-trash {
+        color: #98B0D2;
+        cursor: pointer;
+        display: inline-block;
+      }
+      & .glyphicon-pencil:hover {
+        color: #FFFFFF !important;
+      }
+      & .glyphicon-trash:hover {
+        color: #FFFFFF;
+      }
+      & .separator {
+        font-size: 1em;
+        color: #98B0D2;
+      }
+    }
+  }
+}
+
+.create-task {
+    background: #e1e1e1; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMGQwZDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #e1e1e1 0%, #d0d0d0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e1e1), color-stop(100%,#d0d0d0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e1e1e1 0%,#d0d0d0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e1e1e1 0%,#d0d0d0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e1e1e1 0%,#d0d0d0 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e1e1e1 0%,#d0d0d0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e1', endColorstr='#d0d0d0',GradientType=0 ); /* IE6-8 */
+    height: 50px;
+    width: 100%;
+    border-left: 1px solid #AAAAAA;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    padding: 7px 20px 10px 15px;
+    position: relative;
+  & .glyphicon-plus {
+    position: absolute;
+    font-size: 2em;
+    top:10px;
+    color: #599072;
+  }
+    & .form-task {
+      position: absolute;
+      right: 8px;
+      padding-left: 60px;
+      width: 100%;
+    }
+}
+
+.tasks {
+  & ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+    & li {
+      border-left: 1px solid #AAAAAA;
+      border-right: 1px solid #AAAAAA;
+      border-bottom: 1px solid #E7EBEA;
+      background: #FFFFFF;
+      padding: 13px 20px;
+      position: relative;
+      &:hover {
+        background: #FCFED5;
+        cursor: pointer;
+        & .edit-trash-task {
+          display: block;
+        }
+      }
+      &.done p {
+        text-decoration: line-through;
+        color: #b1b1b7;
+      }
+      &:last-of-type {
+        -webkit-border-bottom-right-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+        -moz-border-radius-bottomright: 20px;
+        -moz-border-radius-bottomleft: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom: 1px solid #AAAAAA;
+      }
+      &:before {
+        content: '';
+        border-left: 1px solid #f5d6d6;
+        border-right: 1px solid #f5d6d6;
+        width: 4px;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        height: 100%;
+      }
+      & .toggle {
+        font-size: 1.4em;
+        position: absolute;
+        height: 25px;
+        margin: auto 0;
+        top:0;
+        bottom: 0;
+      }
+      & p {
+        display: inline-block;
+        font-size: 1.2em;
+        margin-left: 50px;
+        padding-right: 60px;
+        color: #999999;
+        margin-bottom: 0px;
+      }
+      & .edit-trash-task {
+        position: absolute;
+        width: 40px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 25px;
+        color: #999999;
+        display: none;
+        & .glyphicon-pencil:hover, .glyphicon-trash:hover {
+          color: #4c5252;
+        }
+      }
+      & form {
+        padding-left: 50px;
+        & input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

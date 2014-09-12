@@ -1,0 +1,19 @@
+
+
+<section class="create-task">
+    <span class="glyphicon glyphicon-plus"></span>
+    <form role="form" class="form-task">
+      <div class="input-group" id="form-create-task">
+        <input type="text" class="form-control" id="input-task" placeholder="Start typing here to create a task...">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button" id="create-task">Add task</button>
+          </span>
+      </div>
+    </form>
+  </section>
+  <section class="tasks" id="tasks">
+    <ul class="tasks-list" id="tasks-list">
+
+	</ul>
+
+  </section>
